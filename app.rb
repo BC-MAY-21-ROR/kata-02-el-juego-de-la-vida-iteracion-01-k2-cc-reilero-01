@@ -20,12 +20,34 @@ class Grid
     def board
         @board
     end
+
+    def show_board
+        @board.each do |row|
+            puts row.join(" ")
+        end
+    end
+
+    def put_alive_cell(rowindex, columnindex)
+        @board[rowindex][columnindex] = '*'
+    end
+
+    def put_dead_cell(rowindex, columnindex)
+        @board[rowindex][columnindex] = '.'
+    end
+
 end
 
-instance = Grid.new(4, 5)
+class GameOfLife
+    def initialize
+    end
+end
+
+instance = Grid.new(8, 4)
 puts instance.column
 puts instance.row
 
-puts instance.board.join
 
-
+instance.put_alive_cell(1, 4)
+instance.put_alive_cell(2, 3)
+instance.put_alive_cell(2, 4)
+instance.show_board
