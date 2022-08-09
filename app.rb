@@ -37,10 +37,68 @@ class Grid
 
 end
 
-class GameOfLife
-    def initialize
+class Position
+    def initialize(x,y)
+       @x=x
+       @y=y
     end
+
+    def X
+        @x       
+    
+    end
+    def y
+        @y             
+    
+    end
+
+    
+
 end
+
+
+class GameOfLife
+    def next_generation(board)
+                
+    end
+
+    def alive_neighbours(rowindex,columnindex)
+        alive=0
+        if @board[rowindex][columnindex+1]=="*"{
+            alive+=1
+        }
+        if @board[rowindex][columnindex+1]=="*"{
+            alive+=1
+        }
+        if @board[rowindex][columnindex+1]=="*"{
+            alive+=1
+        }
+        if @board[rowindex][columnindex+1]=="*"{
+            alive+=1
+        }
+        if @board[rowindex][columnindex+1]=="*"{
+            alive+=1
+        }
+        if @board[rowindex][columnindex+1]=="*"{
+            alive+=1
+        }
+        if @board[rowindex][columnindex+1]=="*"{
+            alive+=1
+        }
+        if @board[rowindex][columnindex+1]=="*"{
+            alive+=1
+        }                
+    end
+
+
+end
+
+
+
+
+
+
+
 
 instance = Grid.new(8, 4)
 puts instance.column
